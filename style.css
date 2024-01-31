@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Dancing+Script&family=Noto+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400&display=swap');
+body {
+  font-family: Noto Sans Display, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  scroll-behavior: smooth;
+}
+h1{
+  font-family: "Dancing Script";
+  color:rgb(26, 25, 25);
+  font-size: 40px;
+  margin: 0 auto;
+  flex: 1;
+}
+h2{
+  font-family: "Amatic SC";
+  font-size: 60px;
+  margin: 10px;
+}
+p{
+  font-family: "Noto Sans";
+}
+.title{
+  font-family: "Sacramento";
+  font-size: 100px;
+  letter-spacing: 0px;
+}
+.subtitle{
+  font-family: "Noto Sans";
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin-top:10px;
+}
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 60px;
+  }
+  .subtitle{
+    margin-top:0px;
+    font-size: 16px;
+  }
+}
+header {
+  background-color: rgb(218, 212, 197);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between; /* Align logo to the left and h1 to the right */
+  align-items: center;
+  flex-wrap: wrap
+}
+header img {
+  max-height: 50px; /* Adjust the max-height to fit your logo */
+  margin-right: 10px; /* Add margin to the right of the logo for spacing */
+}
+nav {
+  background-color: #7F675B;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+nav a {
+  font-family: "Noto Sans";
+  text-decoration: none;
+  color: #fff;
+  margin: 0 15px;
+  cursor: pointer;
+  padding: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+nav a:hover {
+  border: white solid 2px;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+section {
+  padding: 20px;
+  min-height: 80vh;
+}
+footer {
+  background-color: #7F675B;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: #664f44 solid 2px;
+}
+#home {
+  background-image: url('assets/IMG_9124.JPG'); /* Set the background image path */
+  background-size: cover; /* Cover the entire section with the background image */
+  background-position: center; /* Center the background image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+#menu{
+  background-color: rgb(218, 212, 197); /* Set background color for the menu section */
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+#about{
+  background-color: #4b3c35;
+  color:white;
+}
+#back-to-top {
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #664f44;
+  color: hsl(0, 0%, 100%);
+  padding: 19px;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 1;
+  display: none;
+  align-items: center;
+}
+#back-to-top:hover {
+  border: #9e897e solid 3px;
+  padding: 16px;
+
+}
+/* Social media icons container */
+#social-icons {
+  position: fixed;
+  
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 1001; /* Ensure the icons appear above other elements */
+}
+
+/* Individual social media icon styles */
+#social-icons a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #333;
+}
+#social-icons img {
+  display: block;
+  width: 64px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+#social-icons img:hover{
+  opacity: 0.6;
+}
+
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column {
+  flex: 0 0 calc(50% - 20px); /* Adjust the width of the columns, considering margin */
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.column img {
+  width: 100%;
+  max-width: 500px; /* Set a maximum width for the image */
+  height: auto;
+  display: block;
+  border: #7F675B double 12px;
+}
+.column p {
+  text-align: left; /* Align text to the left */
+}
+
+/* Carousel styles */
+.carousel-container {
+  border: #664f44 solid 20px;
+  overflow: hidden;
+  position: relative;
+  width: 40%;
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: auto; /* Center the carousel */
+}
+.carousel-container img {
+  width: 100%;
+  height: 100%; /* Make images fill the container */
+  object-fit: cover; /* Crop images to cover the entire container */
+}
+
+.carousel-wrapper {
+  display: flex;
+  justify-content: space-between; /* Spread items evenly */
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 auto; /* Fix for flex items not shrinking beyond their content size */
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center the image within the carousel item */
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 24px;
+  color: #7F675B;;
+  cursor: pointer;
+  background-color: #e4dad6;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+.prev:hover {
+  opacity: 1;
+}
+
+.next {
+  right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+.next:hover {
+  opacity: 1;
+}
+#contact{
+  background-color: #7F675B;
+  color: white;
+}
+.contact-form {
+  max-width: 400px; /* Adjust the max-width of the form */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}

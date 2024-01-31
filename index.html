@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Vie En Rosettes</title>
+    <link rel="shortcut icon" href="assets/White Rose.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="assets/Rose.svg" alt="Logo">
+        <h1>La Vie En Rosettes</h1>
+    </header>
+
+    <nav>
+        <a onclick="scrollToSection('home')">Home</a>
+        <a onclick="scrollToSection('menu')">Photos</a>
+        <a onclick="scrollToSection('about')">About Me</a>
+        <a onclick="scrollToSection('pricing')">Pricing</a>
+        <a onclick="scrollToSection('contact')">Contact Me</a>
+    </nav>
+    <div id="social-icons">
+        <a href="https://www.instagram.com/la_vie_en_rosettes/?hl=en" target="_blank">
+            <img src="assets/instagram.png" alt="Instagram">
+        </a>
+        <!-- <a href="https://www.pinterest.com/" target="_blank">
+            <img src="assets/pinterest.png" alt="Pinterest">
+        </a> -->
+    </div>
+    <section id="home">
+        <h2 class ="title">Welcome to My Bakery!</h2>
+        <p class="subtitle">Discover the finest baked goods made with love and passion.</p>
+    </section>
+  
+    <section id="menu">
+      <h2></h2>
+      <div class="carousel-container">
+        <button class="carousel-arrow prev" onclick="changeSlide(-1)">❮</button>
+        <div class="carousel-wrapper">
+            <div class="carousel-item">
+                <img src="assets/IMG_9150.JPG" alt="Menu Item 1">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/Cupcake1.png" alt="Menu Item 2">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/Cupcake2.png" alt="Menu Item 3">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/IMG_9141.PNG" alt="Menu Item 4">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/IMG_9144.JPG" alt="Menu Item 5">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/Cake1.png" alt="Menu Item 6">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/IMG_9151.JPG" alt="Menu Item 7">
+            </div>
+            <!-- Add more carousel items as needed -->
+        </div>
+        <button class="carousel-arrow next" onclick="changeSlide(1)">❯</button>
+    </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="two-column">
+          <div class="column">
+              <p>
+                <br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet non libero quis luctus. Ut sed pretium lacus. Duis et enim dui.
+      Suspendisse a nulla a neque varius rhoncus. Nullam consequat cursus nisl sed iaculis. Nulla facilisi. Phasellus a odio gravida, sollicitudin
+      augue in, mollis velit.
+      <br>
+      <br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet non libero quis luctus. Ut sed pretium lacus. Duis et enim dui.
+      Suspendisse a nulla a neque varius rhoncus. Nullam consequat cursus nisl sed iaculis. Nulla facilisi. Phasellus a odio gravida, sollicitudin
+      augue in, mollis velit.
+      <br>
+      <br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet non libero quis luctus. Ut sed pretium lacus. Duis et enim dui.
+      Suspendisse a nulla a neque varius rhoncus. Nullam consequat cursus nisl sed iaculis. Nulla facilisi. Phasellus a odio gravida, sollicitudin
+      augue in, mollis velit.
+      <br>
+      <br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet non libero quis luctus. Ut sed pretium lacus. Duis et enim dui.
+      Suspendisse a nulla a neque varius rhoncus. Nullam consequat cursus nisl sed iaculis. Nulla facilisi. Phasellus a odio gravida, sollicitudin
+      augue in, mollis velit.
+      <br>
+      <br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet non libero quis luctus. Ut sed pretium lacus. Duis et enim dui.
+      Suspendisse a nulla a neque varius rhoncus. Nullam consequat cursus nisl sed iaculis. Nulla facilisi. Phasellus a odio gravida, sollicitudin
+      augue in, mollis velit.
+              </p>
+          </div>
+          <div class="column">
+              <img src="assets/Scarlette About Me.png" alt="About Us Image">
+          </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing</h2>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Email</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2024 La Vie En Rosettes. All rights reserved.
+    </footer>
+    <!-- Back to Top button -->
+    <button id="back-to-top" onclick="scrollToTop()">↑</button>
+    <script src="script.js"></script>
+</body>
+</html>
