@@ -22,13 +22,13 @@
         <a onclick="scrollToSection('pricing')">Pricing</a>
         <a onclick="scrollToSection('contact')">Contact Me</a>
     </nav>
-    <div id="social-icons">
+    <div class="social-icons">
         <a href="https://www.instagram.com/la_vie_en_rosettes/?hl=en" target="_blank">
             <img src="assets/instagram.png" alt="Instagram">
         </a>
-        <!-- <a href="https://www.pinterest.com/" target="_blank">
-            <img src="assets/pinterest.png" alt="Pinterest">
-        </a> -->
+        <a href="https://www.pinterest.com/" target="_blank">
+            <img src="assets/tiktok.png" alt="TikTok">
+        </a>
     </div>
     <section id="home">
         <h2 class ="title">Welcome to My Bakery!</h2>
@@ -44,22 +44,22 @@
                 <img src="assets/IMG_9150.JPG" alt="Menu Item 1">
             </div>
             <div class="carousel-item">
-                <img src="assets/Cupcake1.png" alt="Menu Item 2">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/Cupcake2.png" alt="Menu Item 3">
-            </div>
-            <div class="carousel-item">
                 <img src="assets/IMG_9141.PNG" alt="Menu Item 4">
             </div>
             <div class="carousel-item">
                 <img src="assets/IMG_9144.JPG" alt="Menu Item 5">
             </div>
             <div class="carousel-item">
-                <img src="assets/Cake1.png" alt="Menu Item 6">
+                <img src="assets/IMG_9151.JPG" alt="Menu Item 7">
             </div>
             <div class="carousel-item">
-                <img src="assets/IMG_9151.JPG" alt="Menu Item 7">
+                <img src="assets/IMG_9160.JPG" alt="Menu Item 7">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/IMG_9161.JPG" alt="Menu Item 7">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/IMG_9162.JPG" alt="Menu Item 7">
             </div>
             <!-- Add more carousel items as needed -->
         </div>
@@ -69,9 +69,12 @@
 
     <section id="about">
         <h2>About Me</h2>
+        <hr>
         <div class="two-column">
           <div class="column">
+            
               <p>
+                
                 <br>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent imperdiet non libero quis luctus. Ut sed pretium lacus. Duis et enim dui.
       Suspendisse a nulla a neque varius rhoncus. Nullam consequat cursus nisl sed iaculis. Nulla facilisi. Phasellus a odio gravida, sollicitudin
@@ -110,7 +113,9 @@
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <form class="contact-form">
+        <hr class="contact-hr">
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="21bcf912-0273-4e43-b73c-c2128eda60da">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -123,7 +128,7 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="submit">Send Email</button>
+            <button type="submit" onclick="sendEmail()">Send Email</button>
         </form>
     </section>
 
@@ -132,6 +137,7 @@
     </footer>
     <!-- Back to Top button -->
     <button id="back-to-top" onclick="scrollToTop()">↑</button>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script src="script.js"></script>
 </body>
 </html>

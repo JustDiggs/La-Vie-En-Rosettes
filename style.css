@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 body {
-  font-family: Noto Sans Display, sans-serif;
+  font-family: "Noto Sans", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f8f8f8;
@@ -11,13 +12,13 @@ body {
 }
 h1{
   font-family: "Dancing Script";
-  color:rgb(26, 25, 25);
+  color:#7F675B;
   font-size: 40px;
   margin: 0 auto;
   flex: 1;
 }
 h2{
-  font-family: "Amatic SC";
+  font-family: "Allura";
   font-size: 60px;
   margin: 10px;
 }
@@ -35,15 +36,6 @@ p{
   letter-spacing: 2px;
   margin-top:10px;
 }
-@media only screen and (max-width: 767px) {
-  .title {
-    font-size: 60px;
-  }
-  .subtitle{
-    margin-top:0px;
-    font-size: 16px;
-  }
-}
 header {
   background-color: rgb(218, 212, 197);
   color: #fff;
@@ -58,7 +50,7 @@ header img {
   max-height: 50px; /* Adjust the max-height to fit your logo */
   margin-right: 10px; /* Add margin to the right of the logo for spacing */
 }
-nav {
+nav{
   background-color: #7F675B;
   color: #fff;
   text-align: center;
@@ -68,7 +60,7 @@ nav a {
   font-family: "Noto Sans";
   text-decoration: none;
   color: #fff;
-  margin: 0 15px;
+  margin: 0 12px;
   cursor: pointer;
   padding: 8px;
   padding-left: 12px;
@@ -138,9 +130,9 @@ footer {
 
 }
 /* Social media icons container */
-#social-icons {
+.social-icons {
   position: fixed;
-  
+  cursor: pointer;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
@@ -150,30 +142,28 @@ footer {
 }
 
 /* Individual social media icon styles */
-#social-icons a {
+.social-icons a {
   display: block;
   margin-bottom: 10px;
   text-decoration: none;
   color: #333;
 }
-#social-icons img {
+.social-icons img {
   display: block;
   width: 64px;
   margin-bottom: 10px;
   text-decoration: none;
   transition: opacity 0.15s;
 }
-#social-icons img:hover{
+.social-icons img:hover{
   opacity: 0.6;
 }
-
 .two-column {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
-
 .column {
   flex: 0 0 calc(50% - 20px); /* Adjust the width of the columns, considering margin */
   box-sizing: border-box;
@@ -183,7 +173,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
 .column img {
   width: 100%;
   max-width: 500px; /* Set a maximum width for the image */
@@ -194,14 +183,12 @@ footer {
 .column p {
   text-align: left; /* Align text to the left */
 }
-
 /* Carousel styles */
 .carousel-container {
   border: #664f44 solid 20px;
   overflow: hidden;
   position: relative;
   width: 40%;
-  max-width: 800px; /* Adjust the maximum width as needed */
   margin: auto; /* Center the carousel */
 }
 .carousel-container img {
@@ -215,20 +202,17 @@ footer {
   justify-content: space-between; /* Spread items evenly */
   transition: transform 0.5s ease-in-out;
 }
-
 .carousel-item {
   flex: 0 0 auto; /* Fix for flex items not shrinking beyond their content size */
   box-sizing: border-box;
   width: 100%;
 }
-
 .carousel-item img {
   width: 100%;
   height: auto;
   display: block;
   margin: 0 auto; /* Center the image within the carousel item */
 }
-
 .carousel-arrow {
   position: absolute;
   top: 50%;
@@ -237,31 +221,33 @@ footer {
   cursor: pointer;
   background-color: #e4dad6;
   padding: 10px;
-  border: none;
+  border: rgba(255, 255, 255, 0) solid 2px;
   border-radius: 50%;
   z-index: 1;
 }
-
 .prev {
   left: 10px;
   padding-left: 20px;
   padding-right: 20px;
   opacity: 0.7;
-  transition: opacity 0.15s;
+  transition: opacity 0.20s;
+  transition: border 0.30s;
 }
 .prev:hover {
   opacity: 1;
+  border: white solid 2px;
 }
-
 .next {
   right: 10px;
   padding-left: 20px;
   padding-right: 20px;
   opacity: 0.7;
-  transition: opacity 0.15s;
+  transition: opacity 0.20s;
+  transition: border 0.30s;
 }
 .next:hover {
   opacity: 1;
+  border: white solid 2px;
 }
 #contact{
   background-color: #7F675B;
@@ -271,12 +257,10 @@ footer {
   max-width: 400px; /* Adjust the max-width of the form */
   margin: 0 auto; /* Center the form horizontally */
 }
-
 .contact-form label {
   display: block;
   margin-bottom: 8px;
 }
-
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -284,11 +268,63 @@ footer {
   margin-bottom: 16px;
   box-sizing: border-box;
 }
+hr {
+  border: 0;
+  height: 2px;
+  background: #7F675B; /* Change the color as needed */
+  margin: 20px 0; /* Adjust margin as needed */
+}
 
 .contact-form button {
-  background-color: #333;
+  background-color:#4b3c35;
   color: #fff;
   padding: 10px;
   border: none;
+  border-radius: 3px;
   cursor: pointer;
+}
+.contact-hr{
+  background: white;
+  margin: 30px auto;
+  width: 40%;
+}
+#contact h2{
+  text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 60px;
+  }
+  .subtitle{
+    margin-top:0px;
+    font-size: 16px;
+  }
+  .social-icons img {
+    width: 50px;
+  }
+  .social-icons {
+    right: 10px;
+  }
+  .two-column {
+      flex-direction: column; /* Change to a vertical layout */
+  }
+  .carousel-container {
+    width: 74%; /* Set to 100% width on smaller screens */
+}
+  .carousel-container img {
+    height: auto; /* Allow images to maintain their aspect ratio on smaller screens */
+}
+nav {
+  flex-wrap: wrap; /* Allow the items to wrap to the next line */
+  font-size: 14px;
+}
+
+nav a {
+  margin: 5px; /* Adjust the margin for better spacing on smaller screens */
+  margin-top: 10px;
+}
+.contact-hr{
+  background: white;
+  width: 100%;
+}
 }
