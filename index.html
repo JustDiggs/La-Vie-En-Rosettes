@@ -10,73 +10,66 @@
 </head>
 
 <body>
+    
     <header>
-        <img src="assets/Rose.svg" alt="Logo">
+        <img src="assets/La Vie En Rosettes Logo.PNG" alt="Logo" class="LogoHeader">
         <h1>La Vie En Rosettes</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- Unicode for hamburger icon -->
+        </div>
+        <a class="iglogo"href="https://www.instagram.com/la_vie_en_rosettes/?hl=en" target="_blank">
+            <img src="assets/instagram.png" alt="Instagram">
+        </a>
     </header>
 
     <nav>
-        <!--<a onclick="scrollToSection('home')">Home</a> -->
-        <a onclick="scrollToSection('menu')">Photos</a>
-        <a onclick="scrollToSection('about')">About Me</a>
-        <!-- <a onclick="scrollToSection('pricing')">Pricing</a> -->
-        <a onclick="scrollToSection('contact')">Contact Me</a>
-    </nav>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/la_vie_en_rosettes/?hl=en" target="_blank">
-            <img src="assets/instagram.png" alt="Instagram">
-        </a>
-        <!--<a href="https://www.pinterest.com/" target="_blank">
-            <img src="assets/tiktok.png" alt="TikTok">
-        </a>-->
-    </div>
-    <section id="home">
-        <h2 class ="title">Welcome to My Bakery!</h2>
-        <p class="subtitle">Discover the finest baked goods made with love and passion.</p>
-    </section>
-  
-    <section id="menu">
-      <h2></h2>
-      <div class="carousel-container">
-        <button class="carousel-arrow prev" onclick="changeSlide(-1)">❮</button>
-        <div class="carousel-wrapper">
-            <div class="carousel-item">
-                <img src="assets/IMG_9150.JPG" alt="Menu Item 1">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/IMG_9141.PNG" alt="Menu Item 2">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/IMG_9144.JPG" alt="Menu Item 3">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/IMG_9151.JPG" alt="Menu Item 4">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/IMG_9160.JPG" alt="Menu Item 5">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/IMG_9161.JPG" alt="Menu Item 6">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/IMG_9162.JPG" alt="Menu Item 7">
-            </div>
-            <!-- Add more carousel items as needed -->
+        
+        <div class="nav-links" id="navLinks">
+            <a onclick="scrollToSection('menu')">PHOTOS</a>
+            <a onclick="scrollToSection('about')">ABOUT ME</a>
+            <a onclick="scrollToSection('contact')">CONTACT</a>
+            <a class ="igtitle" href="https://www.instagram.com/la_vie_en_rosettes/?hl=en" target="_blank">INSTAGRAM</a>
         </div>
-        <button class="carousel-arrow next" onclick="changeSlide(1)">❯</button>
-    </div>
+    </nav>
+    <section id="home">
     </section>
-
+    <section id="gallery">
+        <div class="bento-container">
+            <!-- Left Side of Bento -->
+            <div class="col-left">
+                <div class="row row1 "></div>
+                <div class="row row2">
+                    <div class="row-col left">
+                        <div class="row-col-col row1 leftup"></div>
+                        <div class="row-col-col row2 leftdown"></div>
+                    </div>
+                    <div class="row-col right"></div>
+                </div>
+            </div>
+            <!-- Right Side of Bento -->
+            <div class="col-right">
+                <div class="row top">
+                    <div class="photo-header"><span style="font-size: 20px; font-family: Sanchez; letter-spacing: 7px">PORTFOLIO</span> Gallery</div>
+                </div>
+                <div class="row mid"></div>
+                <div class="row bot">
+                    <div class="row-col chick"></div>
+                    <div class="row-col other">
+                        <div class="row-col-col up"></div>
+                        <div class="row-col-col down"></div>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </section>
     <section id="about">
-        <h2>About Me</h2>
+        <h2 class="about-header"><span class="aboutt" style="font-family: Sanchez; padding-right:30px; font-size: 25px; letter-spacing: 7px">ABOUT</span> Scarlett</h2>
         <hr>
         <div class="two-column">
           <div class="column">
-            
               <p>
-                
                 <br>
-                Hi! I’m Scarlett.
+                Hi, I’m Scarlett!
                 <br>
                 <br>
                 I’m a student, athlete and baker from Barrie, Ontario who’s loved combining baking and beauty from a young age.

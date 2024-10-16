@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+@import url('https://fonts.cdnfonts.com/css/brittany-signature');
+@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&family=Shadows+Into+Light+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+
 body {
   font-family: "Noto Sans", sans-serif;
   margin: 0;
@@ -11,19 +16,19 @@ body {
   scroll-behavior: smooth;
 }
 h1{
-  font-family: "Dancing Script";
-  color:#7F675B;
+  font-family: "Brittany Signature";
+  color: black;
   font-size: 40px;
   margin: 0 auto;
   flex: 1;
 }
 h2{
-  font-family: "Allura";
+  font-family: "Brittany Signature";
   font-size: 60px;
   margin: 10px;
 }
 p{
-  font-family: "Noto Sans";
+  font-family: "Sanchez";
 }
 .title{
   font-family: "Sacramento";
@@ -37,9 +42,10 @@ p{
   margin-top:10px;
 }
 header {
-  background-color: rgb(218, 212, 197);
+  background-color: #f8f8f8;
+  max-height: 100px;
   color: #fff;
-  padding: 10px;
+  padding-right: 60px;
   text-align: center;
   display: flex;
   justify-content: space-between; /* Align logo to the left and h1 to the right */
@@ -48,16 +54,23 @@ header {
 }
 header img {
   max-height: 50px; /* Adjust the max-height to fit your logo */
-  margin-right: 10px; /* Add margin to the right of the logo for spacing */
+  margin-right: -30px; /* Add margin to the right of the logo for spacing */
+}
+.LogoHeader{
+  max-height: 120px;
+  position: relative;
+  top: 10px;
+  left: 20px;
 }
 nav{
-  background-color: #7F675B;
+  background-color: #95afbc;
   color: #fff;
   text-align: center;
   padding: 10px;
+  
 }
 nav a {
-  font-family: "Noto Sans";
+  font-family: "Sanchez";
   text-decoration: none;
   color: #fff;
   margin: 0 12px;
@@ -77,17 +90,17 @@ section {
   min-height: 80vh;
 }
 footer {
-  background-color: #7F675B;
+  background-color: #95afbc;
   color: #fff;
   text-align: center;
   padding: 10px;
   position: fixed;
   bottom: 0;
   width: 100%;
-  border-top: #664f44 solid 2px;
+  border-top: #607b89 solid 2px;
 }
 #home {
-  background-image: url('assets/IMG_9124.JPG'); /* Set the background image path */
+  background-image: url('assets/Main\ Page\ Background.jpg'); /* Set the background image path */
   background-size: cover; /* Cover the entire section with the background image */
   background-position: center; /* Center the background image */
   display: flex;
@@ -97,10 +110,200 @@ footer {
   color: #fff;
   text-align: center;
 }
+/* Base styles */
+.hamburger {
+  display: none; /* Hide by default */
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    margin-left: 20px;
+    justify-content: flex-start; /* Move title to left, hamburger to right */
+  }
+  .iglogo{
+    display: none;
+  }
+  h1 {
+    font-size: 32px;
+    flex: 1;
+    text-align: left; /* Align title to the left */
+  }
+  .hamburger {
+    display: block; /* Show hamburger icon only on screens smaller than 768px */
+    padding: 10px;
+    color: black;
+  }
+  .LogoHeader{
+    display: none;
+  }
+
+  .nav-links {
+    display: none; /* Hide navigation links on mobile screens by default */
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 15px;
+    border-top: 1px solid #fff;
+  }
+
+  .nav-links a:hover {
+    background-color: #607b89;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when the hamburger is clicked */
+  }
+  
+}
+
+@media screen and (min-width: 769px) {
+  .hamburger {
+    display: none; /* Ensure hamburger icon is hidden on larger screens */
+  }
+  .igtitle{
+    display: none;
+  }
+
+  .nav-links {
+    display: flex; /* Show the links in regular nav layout for larger screens */
+    flex-direction: row;
+  }
+
+  .nav-links a {
+    padding: 8px 12px;
+    margin: 0 12px;
+    border: none; /* Remove borders for the horizontal links */
+  }
+}
 #menu{
   background-color: rgb(218, 212, 197); /* Set background color for the menu section */
   padding-top: 80px;
   padding-bottom: 80px;
+}
+#gallery{
+  min-height: 93vh;
+  background-color: #95afbc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bento-container{
+  min-height: 80vh;
+  width: 1750px;
+  padding: 1em;
+  display: flex;
+  gap: 2rem;
+}
+.photo img{
+  max-width: 100%;
+  height: auto;
+  flex: 1 1 auto;
+  object-fit: cover;
+}
+@media(max-width:768px) {
+  .bento-container{
+    flex-direction: column;
+  }
+  
+}
+/* Left Side of Bento */
+.col-left{
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.row{
+  flex: 1 1 auto;
+  background-size: cover; /* Maintain aspect ratio */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Avoid repeating the image */
+}
+.row1{
+  background-image: url(assets/Bento-Box/B_Y_Cupcakes.png);
+  
+}
+.row2{
+  display: flex;
+  gap: 1em;
+}
+.row-col{
+  flex: 1;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  background-size: cover; /* Maintain aspect ratio */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Avoid repeating the image */
+}
+.left{
+  flex: 1;
+}
+.leftup{
+  background-image: url(assets/Bento-Box/Pink_Flower_Cake.png);
+}
+.leftdown{
+  background-image: url(assets/Bento-Box/B_Cupcakes.JPG);
+}
+.right{
+  flex: 1.8;
+  background-image: url(assets/Bento-Box/Best_Cake.png);
+}
+.chick{
+  background-image: url(assets/Bento-Box/CFA_Cake.png);
+}
+.up{
+  background-image: url(assets/Bento-Box/G_Cupcake.png);
+}
+.down{
+  background-image: url(assets/Bento-Box/C_Cupcakes.png);
+}
+.row-col-col{
+  flex: 1;
+  background-size: cover; /* Maintain aspect ratio */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Avoid repeating the image */
+}
+/* Right Side of Bento */
+.photo-header{
+  display: flex;
+  color: white;
+  font-size: 50px;
+  font-family: "Brittany Signature";
+  justify-content: center;
+  align-items: center;
+}
+.col-right{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.top{
+  flex: 0;
+}
+.mid{
+  flex: 1.2;
+  background-image: url(assets/Main\ Page\ Background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bot{
+  flex: 2.02;
+  display: flex;
+  gap: 0.5em;
+}
+.other{
+  display:flex;
 }
 #about{
   background-color: #4b3c35;
@@ -111,7 +314,7 @@ footer {
   top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #664f44;
+  background-color: #95afbc;
   color: hsl(0, 0%, 100%);
   padding: 19px;
   border: none;
@@ -158,6 +361,16 @@ footer {
 .social-icons img:hover{
   opacity: 0.6;
 }
+/*About Me Section*/
+#about{
+  background-color: #5d899e;
+}
+.about-header{
+  display: flex;
+  align-items: center;
+  font-size: 90px;
+  margin-left: 100px;
+}
 .two-column {
   display: flex;
   flex-wrap: wrap;
@@ -165,94 +378,49 @@ footer {
   align-items: center;
 }
 .column {
+  display: flex;
   flex: 0 0 calc(50% - 20px); /* Adjust the width of the columns, considering margin */
   box-sizing: border-box;
   margin-bottom: 20px;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 .column img {
   width: 100%;
   max-width: 500px; /* Set a maximum width for the image */
   height: auto;
   display: block;
-  border: #7F675B double 12px;
+  border: #95afbc solid 12px;
 }
 .column p {
-  text-align: left; /* Align text to the left */
-  font-size: 24px;
-  margin-left: 15px;
+  text-align: center; /* Align text to the left */
+  font-size: 28px;
+  margin-left: 50px;
 }
-/* Carousel styles */
-.carousel-container {
-  border: #664f44 solid 20px;
-  overflow: hidden;
-  position: relative;
-  width: 40%;
-  margin: auto; /* Center the carousel */
+hr {
+  border: 0;
+  height: 5px;
+  background: #95afbc; /* Change the color as needed */
+  margin: 20px 0; /* Adjust margin as needed */
 }
-.carousel-container img {
-  width: 100%;
-  height: 100%; /* Make images fill the container */
-  object-fit: cover; /* Crop images to cover the entire container */
-}
-
-.carousel-wrapper {
-  display: flex;
-  justify-content: space-between; /* Spread items evenly */
-  transition: transform 0.5s ease-in-out;
-}
-.carousel-item {
-  flex: 0 0 auto; /* Fix for flex items not shrinking beyond their content size */
-  box-sizing: border-box;
-  width: 100%;
-}
-.carousel-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto; /* Center the image within the carousel item */
-}
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  font-size: 24px;
-  color: #7F675B;;
-  cursor: pointer;
-  background-color: #e4dad6;
-  padding: 10px;
-  border: rgba(255, 255, 255, 0) solid 2px;
-  border-radius: 50%;
-  z-index: 1;
-}
-.prev {
-  left: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  opacity: 0.7;
-  transition: opacity 0.20s;
-  transition: border 0.30s;
-}
-.prev:hover {
-  opacity: 1;
-  border: white solid 2px;
-}
-.next {
-  right: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  opacity: 0.7;
-  transition: opacity 0.20s;
-  transition: border 0.30s;
-}
-.next:hover {
-  opacity: 1;
-  border: white solid 2px;
+@media screen and (max-width: 768px) {
+  .about-header{
+    display: flex;
+    justify-content: center;
+    font-size: 55px;
+    margin-left: 10px;
+  }
+  .aboutt{
+    font-size: 25px;
+  }
+  .column p {
+    margin-left: 0px;
+  }
 }
 #contact{
-  background-color: #7F675B;
+  background-color: #95afbc;
   color: white;
 }
 .contact-form {
@@ -270,15 +438,10 @@ footer {
   margin-bottom: 16px;
   box-sizing: border-box;
 }
-hr {
-  border: 0;
-  height: 2px;
-  background: #7F675B; /* Change the color as needed */
-  margin: 20px 0; /* Adjust margin as needed */
-}
+
 
 .contact-form button {
-  background-color:#4b3c35;
+  background-color:#5d899e;
   color: #fff;
   padding: 10px;
   border: none;
