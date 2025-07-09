@@ -161,6 +161,7 @@ footer {
 
   .nav-links.active {
     display: flex; /* Show links when the hamburger is clicked */
+    font-size: 10px;
   }
   
 }
